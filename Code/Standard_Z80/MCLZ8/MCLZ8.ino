@@ -3029,7 +3029,15 @@ return;
 // Main loop
 //
 // -------------------------------------------------
+//CG Add declare clock speed routine
+extern "C" uint32_t set_arm_clock(uint32_t frequency); // required prototype
+//CG Add
+
  void loop() {
+  //CG Add - if lower than expected speed, change it	 
+  if ( F_CPU_ACTUAL < 816000000 ) set_arm_clock(816000000);
+  //CG Add
+
   uint16_t local_counter=0;
 
 
