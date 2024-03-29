@@ -1,3 +1,4 @@
+#pragma GCC optimize ("O3")
 //
 //
 //  File Name   :  MCLZ8.c
